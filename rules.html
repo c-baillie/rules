@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.436">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Statistical Process Control (SPC) Charts Rules</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<script src="rules_files/libs/clipboard/clipboard.min.js"></script>
+<script src="rules_files/libs/quarto-html/quarto.js"></script>
+<script src="rules_files/libs/quarto-html/popper.min.js"></script>
+<script src="rules_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="rules_files/libs/quarto-html/anchor.min.js"></script>
+<link href="rules_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="rules_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="rules_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="rules_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="rules_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-rules-may-be-unclear" id="toc-why-rules-may-be-unclear" class="nav-link active" data-scroll-target="#why-rules-may-be-unclear">Why Rules may be unclear</a></li>
+  <li><a href="#rules-for-determining-a-special-cause" id="toc-rules-for-determining-a-special-cause" class="nav-link" data-scroll-target="#rules-for-determining-a-special-cause">Rules for Determining a Special Cause</a></li>
+  <li><a href="#interpretation-of-rules" id="toc-interpretation-of-rules" class="nav-link" data-scroll-target="#interpretation-of-rules">Interpretation of Rules</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Statistical Process Control (SPC) Charts Rules</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="why-rules-may-be-unclear" class="level2">
+<h2 class="anchored" data-anchor-id="why-rules-may-be-unclear">Why Rules may be unclear</h2>
+<ul>
+<li><p>Different rules for <strong>Run Charts</strong> and <strong>SPC Charts</strong></p></li>
+<li><p>Many different rule sets</p>
+<ul>
+<li><strong>3-Sigma Rule</strong>: The original test devised by Shewhart as one test to identify special cause variation. The rule signals if one or more data points fall outside the 3-sigma limits. While effective in detecting larger shifts in data, minor of moderate shifts may go unnoticed. Therefore, many additional tests have been proposed to increase the sensitivity to non-random variation.</li>
+<li><a href="https://en.wikipedia.org/wiki/Western_Electric_rules">Western Electric Rules</a> described in the Statistical Quality Control Handbook (Western Electric Company 1956).</li>
+<li><a href="https://en.wikipedia.org/wiki/Nelson_rules">Nelson Rules</a> first published in the October 1984 issue of the Journal of Quality Technology in an article by Lloyd S Nelson.<span class="citation" data-cites="nelson_shewhart_1984">[<a href="#ref-nelson_shewhart_1984" role="doc-biblioref">1</a>]</span></li>
+<li>Healthcare Rules recommended by the Institute for Healthcare Improvement</li>
+</ul></li>
+<li><p>Rules are not intuitive</p>
+<ul>
+<li>Most of the rules (other than rule 1) derived derived from Monte Carlo methods.</li>
+</ul></li>
+</ul>
+</section>
+<section id="rules-for-determining-a-special-cause" class="level2">
+<h2 class="anchored" data-anchor-id="rules-for-determining-a-special-cause">Rules for Determining a Special Cause</h2>
+<p>There is general agreement among users of Shewhart charts that a single point outside of either limit is an indication of a special cause of variation.</p>
+<p>However there have been <a href="https://www.qimacros.com/control-chart/stability-analysis-control-chart-rules/">many suggestions</a> for systems of rules to identify special causes that appear as nonrandom patterns within the limits. Provost<span class="citation" data-cites="provost_health_2011">[<a href="#ref-provost_health_2011" role="doc-biblioref">2</a>]</span> uses ﬁve rules which are recommended for general use with Shewhart charts. These rules are consistent in the sense that the chance of occurrence of Rules 2 through 5 in a stable process is approximately equal to the chance of Rule 1 occurring in a stable process. The occurrence of any one of the rules is a clear indication of the presence of a special cause.</p>
+<p><strong>Figure 4.5 summaries these five rules</strong> <img src="h/g6.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="interpretation-of-rules" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation-of-rules">Interpretation of Rules</h2>
+<p>While they work as a system, each rule is useful to identify different types of special causes.</p>
+<ul>
+<li><p>Rule 1 quickly identiﬁes sudden changes in the measure.</p></li>
+<li><p>Rule 2 identiﬁes small, sustained changes (like a small improvement to a process).<br>
+</p></li>
+<li><p>Rule 3 detects a small, consistent drift in a process (trend).<br>
+</p></li>
+<li><p>Rule 4 adds additional sensitivity to detect changes that have not yet triggered Rule 1 or Rule 2.<br>
+</p></li>
+<li><p>Rule 5 is especially useful in detecting a reduction of variation with an I chart, or for detecting improper subgrouping − with an X chart.</p></li>
+</ul>
+<p>For improvement activities, these ﬁve rules can be used to provide evidence of an improvement to a process or system. These rules also provide evidence of “losing” gains previously made in a system.<br>
+<img src="h/rules2.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<ul>
+<li>Comparison of some <a href="https://www.qimacros.com/control-chart/stability-analysis-control-chart-rules/">common rules</a>: <img src="h/rules1.png" class="img-fluid" style="width:100.0%"></li>
+<li><strong>Health Care Data Guide</strong> <a href="c-baillie.github.io/DataGuide">summary</a></li>
+<li><strong>QI Course</strong> Rules are those proposed by Provost <img src="h/rules3.png" class="img-fluid" style="width:100.0%"></li>
+</ul>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-nelson_shewhart_1984" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1 </div><div class="csl-right-inline">Nelson LS. The <span>Shewhart</span> <span>Control</span> <span>Chart</span>—<span>Tests</span> for <span>Special</span> <span>Causes</span>. <em>Journal of Quality Technology</em> 1984;<strong>16</strong>:237–9. doi:<a href="https://doi.org/10.1080/00224065.1984.11978921">10.1080/00224065.1984.11978921</a></div>
+</div>
+<div id="ref-provost_health_2011" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2 </div><div class="csl-right-inline">Provost LP, Murray SK. <em>The health care data guide: Learning from data for improvement</em>. 1st ed. San Francisco, CA: : Jossey-Bass 2011. </div>
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
